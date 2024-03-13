@@ -13,6 +13,7 @@ const sendParticipantEmail = asyncHandler(async (req, res) => {
     ville,
     no_dossier,
   } = req.body;
+  console.log(req.body)
   const html = `<div class="container">
 
 
