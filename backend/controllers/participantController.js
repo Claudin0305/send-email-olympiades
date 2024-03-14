@@ -28,6 +28,7 @@ const sendParticipantEmail = asyncHandler(async (req, res) => {
         ou utilisez ce code <strong>${no_dossier}</strong> pour
         corriger les données erronées en vous reconnectant en utilisant le lien suivant: <a
             href="https://olympiade.grahn-monde.org/edit-dossier/${id}" class="btn-email">Page de modification</a></p>
+            <p>Pour rejoindre le groupe whatsapp, cliquez sur le lien suivant: <a href="https://chat.whatsapp.com/Bptp2yJy9G5J6d2BtJTDaA">https://chat.whatsapp.com/Bptp2yJy9G5J6d2BtJTDaA</a></p>
     <p>Nous vous remercions encore une fois.</p>
     <p class="p">Au nom de l’Organisation des Olympiades Nationales Haïti Sciences 2024</p>
     <p class="p">Rose-Michelle SMITH, Ph.D.</p>
