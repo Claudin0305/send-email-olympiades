@@ -18,5 +18,21 @@ app.use(notFound);
 app.use(errorHandler);
 
 app.get("/", (req, res) => res.send("API running"));
+setInterval(async () => {
+  try {
+    const response = await fetch(
+      "https://send-email-olympiades.onrender.com/api/participants/auto-call"
+    );
+    // Check for successful response
+    if (!response.ok) {
+      throw new Error(`Error fetching data: ${response.status}`);
+    }
+    // Parse the response data (assuming JSON format)
+    const data = await response.json();
+    console.log("Fetched data:", data);
+  } catch (error) {
+    console.error("Error:", error);
+  }
+}, 1000 * 30);
 
 app.listen(port, () => console.log(`Server started on port ${port}`));

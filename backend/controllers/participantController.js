@@ -13,7 +13,7 @@ const sendParticipantEmail = asyncHandler(async (req, res) => {
     ville,
     no_dossier,
   } = req.body;
-  console.log(req.body)
+  console.log(req.body);
   const html = `<div class="container">
 
 
@@ -84,5 +84,7 @@ const sendParticipantEmail = asyncHandler(async (req, res) => {
   }
   res.json({ message: "Success" });
 });
-
-export { sendParticipantEmail };
+const autoCall = asyncHandler(async (req, res) => {
+  res.json({ message: "Succes!" });
+});
+export { sendParticipantEmail, autoCall };
