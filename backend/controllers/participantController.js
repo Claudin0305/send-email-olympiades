@@ -60,7 +60,7 @@ const sendParticipantEmail = asyncHandler(async (req, res) => {
   const resend = new Resend(`${process.env.RESEND_SECRET}`);
   const { data, error } = await resend.emails.send({
     from: `${process.env.EMAIL_FROM}`,
-    to: email,
+    to: `${email}`,
     cc: ["claudin.saintil@isteah.ht"],
     subject: "Olympiades 2024",
     html: html,
